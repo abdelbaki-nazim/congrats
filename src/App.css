@@ -65,6 +65,7 @@ form >div:nth-child(3){
   grid-row: 8/9;  
   align-self: center;
   font-size: 1.1rem;
+  z-index: 60;
 }
 
 .items-container{
