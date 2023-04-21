@@ -253,3 +253,16 @@ video{
   from{transform: translateX(30px);
   opacity: 0;}
 }
+
+
+@media screen and (max-width:1000px) {
+  label{
+    font-size: 1rem;
+  }
+  input[type="text"]{
+    font-size: 0.8rem;
+  }
+  input[type="submit"]{
+    font-size: 0.6rem;  
+  }
+}
