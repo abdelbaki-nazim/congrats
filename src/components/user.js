@@ -19,7 +19,7 @@ function User(){
     async function handleForm(event){
         event.preventDefault()
         try {
-    const {data} = await axios.post('http://localhost:4500/feeds', {name : nameValue.name})
+    const {data} = await axios.post('https://congrats-hb-api.onrender.com/feeds', {name : nameValue.name})
     navigate(`/user/${data}`)
         } catch (error) {
             setErr (error.response.data.msg)

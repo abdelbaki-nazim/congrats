@@ -12,7 +12,7 @@ function Confetti() {
   useEffect( ()=>{    
     async function getUser (){
       try {
-      const {data} = await axios.get(`http://localhost:4500/user/${params.id}`)
+      const {data} = await axios.get(`https://congrats-hb-api.onrender.com/user/${params.id}`)
       setData(data)    
     } catch (error) {
       console.log(error);
