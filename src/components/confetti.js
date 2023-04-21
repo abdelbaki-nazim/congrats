@@ -3,7 +3,6 @@ import axios from 'axios'
 import { useParams } from 'react-router';
 import ReactConfetti from 'react-confetti';
 import ConfettiExplosion from 'react-confetti-explosion';
-import video from "../assets/happy-aid-big.mp4"
 import videosml from "../assets/happy-aid-small.mp4"
 
 function Confetti() {    
