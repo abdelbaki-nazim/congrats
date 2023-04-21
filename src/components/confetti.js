@@ -66,7 +66,7 @@ const [windowDimension, setWindowDimension] = useState({
       setCount(count+1)    
     }, 1000);
     
-  return ()=> clearInterval(timer)
+  return ()=> clearInterval(timer.current)
   }, [count])
 
   useEffect(()=>{
@@ -110,6 +110,9 @@ const [windowDimension, setWindowDimension] = useState({
         case 49:
           setDisplay8(false)
           setDisplay9(true)
+          break;
+          default :
+          console.log("joyeuse fête à tout le monde!");
           break;
       }
 
