@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router';
 import ReactConfetti from 'react-confetti';
@@ -60,9 +60,9 @@ const [windowDimension, setWindowDimension] = useState({
   const[home, setHome] = useState(false)
   const [count, setCount] = useState (-1)
   
- let timer;
+ const timer = useRef(null);
   useEffect(()=>{
-  timer = setInterval(() => {
+  timer.current = setInterval(() => {
       setCount(count+1)    
     }, 1000);
     
