@@ -3,7 +3,8 @@ import axios from 'axios'
 import { useParams } from 'react-router';
 import ReactConfetti from 'react-confetti';
 import ConfettiExplosion from 'react-confetti-explosion';
-import video from "../assets/happy-aid.mp4"
+import video from "../assets/happy-aid-big.mp4"
+import videosml from "../assets/happy-aid-small.mp4"
 
 function Confetti() {    
   const params = useParams()
@@ -169,6 +170,10 @@ const [windowDimension, setWindowDimension] = useState({
 
 <div className="video">
      <video src={video} autoPlay muted/>
+</div>
+<div className="videosml">
+     <video src={video} autoPlay muted media={'screen and (min-width: 601px)'}/>
+     <video src={videosml} autoPlay muted media={'screen and (max-width: 600px)'}/>
 </div>
    
     </div>
