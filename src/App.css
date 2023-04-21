@@ -265,4 +265,7 @@ video{
   input[type="submit"]{
     font-size: 0.6rem;  
   }
+  .items-container{
+    padding: 20px 35px;
+  }
 }
