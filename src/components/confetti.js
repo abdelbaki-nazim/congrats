@@ -169,11 +169,7 @@ const [windowDimension, setWindowDimension] = useState({
 </div>
 
 <div className="video">
-     <video src={video} autoPlay muted/>
-</div>
-<div className="videosml">
-     <video src={video} autoPlay muted media={'screen and (min-width: 601px)'}/>
-     <video src={videosml} autoPlay muted media={'screen and (max-width: 600px)'}/>
+     <video src={videosml} autoPlay muted />
 </div>
    
     </div>
