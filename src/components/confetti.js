@@ -10,7 +10,7 @@ function Confetti() {
   const [data, setData] = useState ([])
   
   useEffect( ()=>{    
-    window.onload = async function getUser (){
+   async function getUser (){
       try {
       const {data} = await axios.get(`https://congrats-hb-api.onrender.com/user/${params.id}`)
       setData(data)
