@@ -59,6 +59,9 @@ function User(){
                 tous droits réservés, créé par Losange
             </small>
         </div>
+        <div className="overlay-user">
+
+        </div>
     </form>
         </div>
     )
