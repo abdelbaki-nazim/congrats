@@ -7,8 +7,7 @@ function User(){
     const [nameValue, setNameValue] = useState ({
         name:''
     })
-    console.log(nameValue);
-
+  
     function handleInput(event){
        setNameValue ({[event.target.id] : event.target.value})
     }
