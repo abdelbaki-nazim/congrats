@@ -27,10 +27,10 @@ function User(){
         } catch (error) {
             const timerRf = useRef()
             setErr (error.response.data.msg)
-            timerRf.current = setInterval(() => {
+            timerRf.current = setTimeout(() => {
                 setErr('')
             }, 3000);
-            return ()=> clearInterval(timerRf.current)            
+            return ()=> clearTimeout(timerRf.current)            
         }        
     }
 
