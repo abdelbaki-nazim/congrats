@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import logo from "../assets/logo.png"
@@ -25,12 +25,11 @@ function User(){
     setLoading('hidden')
     navigate(`/user/${data}`)
         } catch (error) {
-            const timerRf = useRef()
             setErr (error.response.data.msg)
-            timerRf.current = setTimeout(() => {
+            let timerRf = setTimeout(() => {
                 setErr('')
             }, 3000);
-            return ()=> clearTimeout(timerRf.current)            
+            return ()=> clearTimeout(timerRf)            
         }        
     }
 
