@@ -25,6 +25,7 @@ function User(){
     setLoading('hidden')
     navigate(`/user/${data}`)
         } catch (error) {
+            setLoading('hidden')
             setErr (error.response.data.msg)
             let timerRf = setTimeout(() => {
                 setErr('')
