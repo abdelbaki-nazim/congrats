@@ -117,7 +117,7 @@ const [windowDimension, setWindowDimension] = useState({
       }
 
       if(count >= 49){
-        clearInterval(timer)   
+        clearInterval(timer.current)   
           setTimeout(() => {
             setDisplay(false)
             setHome(true)
