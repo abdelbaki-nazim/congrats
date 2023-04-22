@@ -58,7 +58,7 @@ const [windowDimension, setWindowDimension] = useState({
 
   //back home
   const[home, setHome] = useState(false)
-  const [count, setCount] = useState (-1)
+  const [count, setCount] = useState (-2)
   
  const timer = useRef(null);
   useEffect(()=>{
