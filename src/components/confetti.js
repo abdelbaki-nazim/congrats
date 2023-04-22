@@ -63,10 +63,11 @@ const [windowDimension, setWindowDimension] = useState({
  const timer = useRef(null);
   useEffect(()=>{
   timer.current = setInterval(() => {
-      setCount(count+1)    
+      setCount((prev)=>prev+1)    
     }, 1000);
     
   return ()=> clearInterval(timer.current)
+
   }, [count])
 
   useEffect(()=>{
@@ -115,15 +116,17 @@ const [windowDimension, setWindowDimension] = useState({
           console.log("joyeuse fête à tout le monde!");
           break;
       }
-
-      if(count >= 49){
-        clearInterval(timer.current)   
-          setTimeout(() => {
-            setDisplay(false)
-            setHome(true)
-          }, 7000);     
-    }
   },[count])
+
+  useEffect(()=>{
+    if(count >= 49){
+      clearInterval(timer.current)   
+        setTimeout(() => {
+          setDisplay(false)
+          setHome(true)
+        }, 7000);     
+  }
+  }, [count])
  
   return (
     <div className='confetti'>
