@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
 import logo from "../assets/logo.png"
+import Loader from "./loader"
 
 function User(){
     const [nameValue, setNameValue] = useState ({
         name:''
     })
+    const [loading, setLoading] = useState('hidden')
   
     function handleInput(event){
        setNameValue ({[event.target.id] : event.target.value})
@@ -18,7 +20,9 @@ function User(){
     async function handleForm(event){
         event.preventDefault()
         try {
+    setLoading('visible')
     const {data} = await axios.post('https://congrats-hb-api.onrender.com/feeds', {name : nameValue.name})
+    setLoading('hidden')
     navigate(`/user/${data}`)
         } catch (error) {
             setErr (error.response.data.msg)
@@ -51,7 +55,10 @@ function User(){
         </div>
         <div className={ err === '' ? '' : "errors"}>
             <p>
-                {err}
+                {err || 
+                <div style={{visibility: loading}}>
+                    <Loader />
+                </div>}
             </p>
         </div>
         <div>
