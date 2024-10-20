@@ -16,7 +16,7 @@
 
 ## Technologies Used:
 - **HTML/CSS/JavaScript** for the frontend interface.
-- **Node.js/PHP** for generating the custom URLs (or any preferred backend).
+- **Node.js** for generating the custom URLs (or any preferred backend).
 - **Video Player Integration** to display the celebratory message.
 
 ### Future Enhancements:
