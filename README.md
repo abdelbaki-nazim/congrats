@@ -25,3 +25,5 @@
 - Add the option for users to upload custom videos.
 - Customize messages based on specific events (e.g., birthday, wedding, graduation).
 - Add more themes and video styles for different occasions.
+
+https://congrats-hb.netlify.app/   (the backend is hosted on a free plan on Render, so it may take some time to launch the server)
